@@ -60,6 +60,21 @@ def CookieDemo():
     r = requests.get('url', cookie=cookie, headers=headers)
     print r.text
 
+    # 查看响应内容，response.text 返回的是Unicode格式的数据
+    print(r.text)
+
+    # 查看响应内容，response.content返回的字节流数据
+    print(r.content)
+
+    # 查看完整url地址
+    print(r.url)
+
+    # 查看响应头部字符编码
+    print(r.encoding)
+
+    # 查看响应码
+    print(r.status_code)
+
 if __name__ == "__main__":
     paramsDemo()
     # cookieDemo()
